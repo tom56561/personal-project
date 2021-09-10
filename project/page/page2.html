@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夢種子</title>
+    <link rel="icon" href="../image/iconLogo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/page1.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/page1.js"></script>
+</head>
+
+<body>
+    <!-- SVG Sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="facebook" viewBox="0 0 16 16">
+            <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 16 16">
+            <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+        </symbol>
+        <symbol id="phone" viewBox="0 0 32 32">
+            <path
+                d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z">
+            </path>
+        </symbol>
+        <symbol id="location" viewBox="0 0 32 32">
+            <path
+                d="M16 0c-5.523 0-10 4.477-10 10 0 10 10 22 10 22s10-12 10-22c0-5.523-4.477-10-10-10zM16 16.125c-3.383 0-6.125-2.742-6.125-6.125s2.742-6.125 6.125-6.125 6.125 2.742 6.125 6.125-2.742 6.125-6.125 6.125zM12.125 10c0-2.14 1.735-3.875 3.875-3.875s3.875 1.735 3.875 3.875c0 2.14-1.735 3.875-3.875 3.875s-3.875-1.735-3.875-3.875z">
+            </path>
+        </symbol>
+        <symbol id="web" viewBox="0 0 32 32">
+            <path
+                d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 30c-1.967 0-3.84-0.407-5.538-1.139l7.286-8.197c0.163-0.183 0.253-0.419 0.253-0.664v-3c0-0.552-0.448-1-1-1-3.531 0-7.256-3.671-7.293-3.707-0.188-0.188-0.442-0.293-0.707-0.293h-4c-0.552 0-1 0.448-1 1v6c0 0.379 0.214 0.725 0.553 0.894l3.447 1.724v5.871c-3.627-2.53-6-6.732-6-11.489 0-2.147 0.484-4.181 1.348-6h3.652c0.265 0 0.52-0.105 0.707-0.293l4-4c0.188-0.188 0.293-0.442 0.293-0.707v-2.419c1.268-0.377 2.61-0.581 4-0.581 2.2 0 4.281 0.508 6.134 1.412-0.13 0.109-0.256 0.224-0.376 0.345-1.133 1.133-1.757 2.64-1.757 4.243s0.624 3.109 1.757 4.243c1.139 1.139 2.663 1.758 4.239 1.758 0.099 0 0.198-0.002 0.297-0.007 0.432 1.619 1.211 5.833-0.263 11.635-0.014 0.055-0.022 0.109-0.026 0.163-2.541 2.596-6.084 4.208-10.004 4.208z">
+            </path>
+        </symbol>
+        <symbol id="mail3" viewBox="0 0 32 32">
+            <path
+                d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM8 8h16c0.286 0 0.563 0.061 0.817 0.177l-8.817 10.286-8.817-10.287c0.254-0.116 0.531-0.177 0.817-0.177zM6 22v-12c0-0.042 0.002-0.084 0.004-0.125l5.864 6.842-5.8 5.8c-0.045-0.167-0.069-0.34-0.069-0.517zM24 24h-16c-0.177 0-0.35-0.024-0.517-0.069l5.691-5.691 2.826 3.297 2.826-3.297 5.691 5.691c-0.167 0.045-0.34 0.069-0.517 0.069zM26 22c0 0.177-0.024 0.35-0.069 0.517l-5.8-5.8 5.865-6.842c0.003 0.041 0.004 0.083 0.004 0.125v12z">
+            </path>
+        </symbol>
+        <symbol id="mail2" viewBox="0 0 32 32">
+            <path
+                d="M29 4h-26c-1.65 0-3 1.35-3 3v20c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-20c0-1.65-1.35-3-3-3zM12.461 17.199l-8.461 6.59v-15.676l8.461 9.086zM5.512 8h20.976l-10.488 7.875-10.488-7.875zM12.79 17.553l3.21 3.447 3.21-3.447 6.58 8.447h-19.579l6.58-8.447zM19.539 17.199l8.461-9.086v15.676l-8.461-6.59z">
+            </path>
+        </symbol>
+        <symbol id="mail" viewBox="0 0 32 32">
+            <path
+                d="M26.667 0h-21.333c-2.934 0-5.334 2.4-5.334 5.334v21.332c0 2.936 2.4 5.334 5.334 5.334h21.333c2.934 0 5.333-2.398 5.333-5.334v-21.332c0-2.934-2.399-5.334-5.333-5.334zM26.667 4c0.25 0 0.486 0.073 0.688 0.198l-11.355 9.388-11.355-9.387c0.202-0.125 0.439-0.198 0.689-0.198h21.333zM5.334 28c-0.060 0-0.119-0.005-0.178-0.013l7.051-9.78-0.914-0.914-7.293 7.293v-19.098l12 14.512 12-14.512v19.098l-7.293-7.293-0.914 0.914 7.051 9.78c-0.058 0.008-0.117 0.013-0.177 0.013h-21.333z">
+            </path>
+        </symbol>
+        <symbol id="google" viewBox="0 0 32 32">
+            <path
+                d="M16.319 13.713v5.487h9.075c-0.369 2.356-2.744 6.9-9.075 6.9-5.463 0-9.919-4.525-9.919-10.1s4.456-10.1 9.919-10.1c3.106 0 5.188 1.325 6.375 2.469l4.344-4.181c-2.788-2.612-6.4-4.188-10.719-4.188-8.844 0-16 7.156-16 16s7.156 16 16 16c9.231 0 15.363-6.494 15.363-15.631 0-1.050-0.113-1.85-0.25-2.65l-15.113-0.006z">
+            </path>
+        </symbol>
+    </svg>
+    <!-- Top NavBar -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-main d-flex">
+          <a class="navbar-brand ms-4" href="../page/page1.html">
+            <img src="../image/logo.png" alt="" width="90" height="42">
+          </a>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end me-5" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item ms-4">
+                <a class="nav-link text-white link" href="#about">關於我們</a>
+              </li>
+              <li class="nav-item active ms-4">
+                <a class="nav-link text-white link" href="../page/page2.html">講座活動</a>
+              </li>
+              <li class="nav-item dropdown ms-4">
+                <a class="nav-link dropdown-toggle text-white link" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  創客資源
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">零元創業計畫</a>
+                  <a class="dropdown-item" target="_blank" href="https://www.facebook.com/aplusplan.FCU/">搖籃A‘計畫</a>
+                  <a class="dropdown-item" target="_blank" href="https://ustart.yda.gov.tw/bin/home.php">U-start創新創業計畫</a>
+                </div>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link text-white link" href="#">借用資訊</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    <div class="back">
+        <div class="container">
+            <div class="pt-5">
+                <h1 class="d-flex justify-content-center">講座資訊</h1>
+            </div>
+            <div class="row pt-5 pb-6">
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher5.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher2.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher1.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher5.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher2.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher1.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher5.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher2.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher1.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher5.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher2.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid scalebig smallTeacher d-flex mx-auto" src="../image/teacher1.jpg" alt="">
+                    <div class="fs-5 text-center pt-3">江仕超</div>
+                    <p class="text-center text-red"> 商業開發規劃師</p>
+                    <ul class="text-center">
+                        <li>國立交通大學電子物理研究所</li>
+                        <li>奕力科技IC設計工程師</li>
+                        <li>岱宇國際 品牌專案主任</li>
+                        <li>永豐集團 MKJ保健品 Marketing Mananger</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Footer -->
+        <div>
+            <footer class=" pt-4 pb-2 mt-5 border-top ">
+              <div class="row w-100 text-white">
+      
+                <div class=" col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
+                  <img src="../image/logo.png" style="width: 250px;" alt="">
+                </div>
+      
+                <div class=" col-md-4 d-flex align-items-center justify-content-center py-4 py-md-0">
+                  <ul class="nav list-unstyled ">
+                    <li class="mx-3"><a class="icon" href="https://www.instagram.com/dreamseeds.fcu/" target="_blank"><svg
+                          class="bi" width="40px" height="40px">
+                          <use xlink:href="#instagram" />
+                        </svg></a></li>
+                    <li class="mx-3"><a class="icon" href="https://www.facebook.com/fcu.dreamseeds" target="_blank"><svg
+                          class="bi" width="40px" height="40px">
+                          <use xlink:href="#facebook" />
+                        </svg></a></li>
+                  </ul>
+                </div>
+      
+                <div class=" col-md-4 d-flex justify-content-center justify-content-md-start">
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="https://www.fcu.edu.tw/map/" class="nav-link p-0 text-white" target="_blank"><svg class="bi pe-2" width="35px"
+                          height="35px">
+                          <use xlink:href="#location" />
+                        </svg><small>人文社會館B1應諾創客</small></a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><svg class="bi pe-2" width="35px"
+                          height="35px">
+                          <use xlink:href="#mail3" />
+                        </svg><small>fcustartuphub@gmail.com</small></a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><svg class="bi pe-2" width="35px"
+                          height="35px">
+                          <use xlink:href="#phone" />
+                        </svg><small>04-2451-7250 Ext. 6441 or 6440</small></a></li>
+                    <li class="nav-item mb-2"><a href="https://www.fcu.edu.tw/differentbutbetter/entrepreneurship/"
+                        class="nav-link p-0 text-white" target="_blank"><svg class="bi pe-2" width="35px" height="35px">
+                          <use xlink:href="#web" />
+                        </svg><small>逢甲創新創業網站</small></a></li>
+                  </ul>
+                </div>
+      
+              </div>
+              <div>
+                <p class="d-flex justify-content-center text-center text-muted pt-3 pt-md-0">
+                  <small>Copyright&copy;夢種子e-Hub創業港</small>
+                </p>
+              </div>
+      
+            </footer>
+          </div>
+    </div>
+
+
+</body>
+
+</html>
